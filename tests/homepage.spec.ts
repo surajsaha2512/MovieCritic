@@ -35,7 +35,7 @@ test.describe('Home Page test cases', () => {
       await page.waitForTimeout(4000);
       await expect(page.locator(`xpath=//h1[contains(text(),"${sampleMovie}")]`)).toBeVisible();
       await page.getByPlaceholder('Search for your favorite movie').click();
-      await page.getByPlaceholder('Search for your favorite movie').fill('falseeeeeeeee');
+      await page.getByPlaceholder('Search for your favorite movie').fill('      ');
       await page.waitForTimeout(4000);
       await expect(page.locator(`xpath=//h1[contains(text(),"falseeeeeeeee")]`)).not.toBeVisible();
     });
@@ -104,7 +104,7 @@ test.describe('Home Page test cases', () => {
       await expect(page.locator(`xpath=//h1[contains(text(),"${newMovieName}")]`)).not.toBeVisible();
     });
 
-    test('Verify the edit review operation for a movie in the review page', async ({ page }) => {
+    test('Verify the review edit option for a movie in the review page', async ({ page }) => {
       await page.getByPlaceholder('Search for your favorite movie').click();
       await page.getByPlaceholder('Search for your favorite movie').fill(staticMovie);
       await page.waitForTimeout(4000);

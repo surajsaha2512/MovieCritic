@@ -3,16 +3,7 @@ import { fail } from 'assert';
 test.describe.configure({ mode: 'serial' });
 test.describe('Average Rating sync with Home page and review page', () => {
     const appUrl="https://movie-reviews-psi.vercel.app/"
-    const newMovieName="Titanic"  //enter the name of the new movie here
-    const newMovieDate="2024-02-04"   //enter the release date of the new movie here
-    const yourName="tester"
-    const rating="7"
-    const review="Excellent"
-    const sampleMovie="testing"
-    const editMovie="edited"
-    const deleteMovie=editMovie
     const staticMovie="do not delete"
-    const editMovieDate="2024-02-08"
     test.beforeEach(async ({ page }) => {
         // Go to https://movie-reviews-psi.vercel.app/
         await page.goto(appUrl,{waitUntil: 'networkidle'});
